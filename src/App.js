@@ -1,8 +1,12 @@
-import './App.css';
+import Posts from "./components/Posts";
+import Launches from "./components/Launches";
 
 function App() {
   return (
-    <div></div>
+    <div>
+      {/*<Posts/>*/}
+        <Launches/>
+    </div>
   );
 }
 
