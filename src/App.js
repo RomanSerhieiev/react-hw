@@ -1,9 +1,11 @@
-import './App.css';
+import {Cars} from "./components/Cars/Cars";
+import {Users} from "./components/Users/Users";
 
-function App() {
+export function App() {
   return (
-    <div></div>
+    <div>
+      <Cars />
+      <Users />
+    </div>
   );
 }
-
-export default App;
