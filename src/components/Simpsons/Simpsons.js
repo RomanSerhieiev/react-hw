@@ -65,55 +65,33 @@ const Simpsons = () => {
         },
         {
             id: 6,
-            name: "Abraham Jebediah \"Abe\" Simpson II",
+            name: "Santa's Little Helper",
             gender: "Male",
             status: "Alive",
-            countryOfBirth: "The Old Country",
-            age: 87,
-            hairColor: "Blonde",
-            occupation: "Retired",
-            info: "Abraham Jebediah \"Abe\" Simpson II, commonly known as Grampa Simpson or simply Grampa, is a major recurring character in The Simpsons and a supporting character in The Simpsons Movie. He is the oldest patriarch of the Simpson family, husband of Rita LaFleur, ex-husband of the late Mona Simpson, father of Homer Simpson, Herbert Powell and Abbey, father-in-law of Marge Simpson and paternal grandfather of Bart, Lisa and Maggie Simpson. He is also the ex-boyfriend of Jacqueline Bouvier.",
-            image: "https://static.wikia.nocookie.net/simpsons/images/a/a9/Abraham_Simpson.png"
+            countryOfBirth: "United States",
+            age: 7,
+            hairColor: "Light brown",
+            occupation: "Family dog",
+            info: "Santa's Little Helper (born May 12, age 7), also known as No. 8 (his number in the dog race in \"Simpsons Roasting on an Open Fire\"), Suds McDuff (the name he changed to after becoming Duff Beer's mascot in \"Old Yeller-Belly\"), and Santa's Stupid Name (Brian Griffin's nickname for him in \"The Simpsons Guy\"), is the Simpson family's dog. Santa's Little Helper has been with the Simpson's family the whole series instead of dying or simply not making multiple appearances like how other animals in their care have.",
+            image: "https://static.wikia.nocookie.net/simpsons/images/2/2c/Santa%27s_Little_Helper.png"
         },
         {
             id: 7,
-            name: "Mona Simpson",
-            gender: "Female",
-            status: "Deceased",
-            countryOfBirth: "The Old Country",
-            age: 79,
-            hairColor: "Gray",
-            occupation: "Fugitive",
-            info: "Mona Simpson, also known as Sunny was the mother of Homer Simpson, mother-in-law of Marge Simpson, paternal grandmother of Bart, Lisa and Maggie Simpson and ex-wife of Abraham Simpson II.",
-            image: "https://static.wikia.nocookie.net/simpsons/images/5/52/IMG_1693.PNG"
-        },
-        {
-            id: 8,
-            name: "Patricia Maleficent \"Patty\" Bouvier",
+            name: "Snowball V",
             gender: "Female",
             status: "Alive",
             countryOfBirth: "United States",
-            age: 37,
-            hairColor: "Gray",
-            occupation: "Springfield DMV Employee",
-            info: "Patricia Maleficent[2] \"Patty\" Bouvier is one of Marge's cynical chain-smoking twin sisters, who works at the [[Department of Motor Vehicles] (DMV) and has a strong dislike for her brother-in-law, Homer Simpson. Patty is a lesbian since she has confessed this to Marge (asking \"did you actually think I was straight?\"), appeared on a float at a pride parade, and had tomboy tendencies as a child. She is also the maternal aunt to Bart, Lisa, Maggie, and Ling. She is named after Matt Groening's sister Patty Groening.",
-            image: "https://static.wikia.nocookie.net/simpsons/images/5/54/Temp.png"
-        },
-        {
-            id: 9,
-            name: "Selma Bouvier",
-            gender: "Female",
-            status: "Alive",
-            countryOfBirth: "United States",
-            age: 41,
-            hairColor: "Gray",
-            occupation: "Employee of Department of Motor Vehicles",
-            info: "Selma Bouvier-Terwilliger-Hutz-McClure-Discothèque-Simpson-D'Amico (née Bouvier) is one of Marge's older chain-smoking twin sisters. She works at the DMV and possesses a strong dislike for her brother-in-law, Homer, although on extremely rare occasions she shows kindness towards him and seems to tolerate him. She seems to despise Homer slightly less than her twin sister, Patty Bouvier.",
-            image: "https://static.wikia.nocookie.net/simpsons/images/b/ba/Selma_Bouvier.png"
+            age: 2,
+            hairColor: "Black",
+            occupation: "Family cat",
+            info: "Snowball V is the Simpsons's fifth cat who looks exactly the same as Snowball II, who was accidentally struck and killed by Dr. Hibbert with his Mercedes-Benz. The Crazy Cat Lady throws the cat at Lisa while she is mourning the deaths of the other cats that she kept (Snowball III and Coltrane (Snowball IV). She, Santa's Little Helper and She Biscuit are the three current pets of the Simpson family. She is actually known as Snowball II.",
+            image: "https://static.wikia.nocookie.net/simpsons/images/d/db/Snowball_V.png"
         }
     ]
     return (
         <div>
+            <h1>Simpson family</h1>
+            <img src="https://static.wikia.nocookie.net/simpsons/images/6/63/The_Simpsons_Simpsons_FamilyPicture.png" alt="Simpson family" height="400px"/>
             {simpsons.map(simpson => <Simpson key = {simpson.id} simpson = {simpson}/>)}
         </div>
     );
