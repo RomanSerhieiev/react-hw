@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Users = () => {
-    return (
-        <div>
-            <h2>Property Drill</h2>
+import User from './User'
+import style from './Users.module.css'
 
+const Users = ({users}) => {
+    return (
+        <div className={style.container}>
+            {users.map((user, id) => <User key={id} user={user} />)}
         </div>
     );
 };
