@@ -1,7 +1,7 @@
 import {Cars} from "./components/Cars/Cars";
 import {Users} from "./components/Users/Users";
 
-export function App() {
+const App = () => {
   return (
     <div>
       <Cars />
@@ -9,3 +9,5 @@ export function App() {
     </div>
   );
 }
+
+export default App
