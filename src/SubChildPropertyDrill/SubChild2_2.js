@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const SubChild2_2 = ({text}) => {
-    text('Hello, SubChild1_1 from SubChild2_2')
+    useEffect(() => {
+        text('Hello, SubChild1_1 from SubChild2_2')
+    }, [])
 
     return (
         <div>
