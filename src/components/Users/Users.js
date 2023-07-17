@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {useAxios} from "../../hooks/useAxios";
 import {jpService} from "../../services/jp.service";
-import {User} from "../User/User";
+import User from "./User/User";
 
-export const Users = () => {
+const Users = () => {
     const [allUsers, setAllUsers] = useState(null);
     const [userForUpdate, setUserForUpdate] = useState(null);
     const [users] = useAxios(jpService.getAllUsers(), allUsers);
@@ -16,3 +16,5 @@ export const Users = () => {
         </div>
     );
 };
+
+export default Users

@@ -1,10 +1,10 @@
 import {carService} from "../../services/car.services";
-import {Car} from "../Car/Car";
+import {Car} from "./Car/Car";
 import {useAxios} from "../../hooks/useAxios";
-import {CarForm} from "../CarForm/CarForm";
+import {CarForm} from "./CarForm/CarForm";
 import {useState} from "react";
 
-export const Cars = () => {
+const Cars = () => {
     const [allCars, setAllCars] = useState(null);
     const [carForUpdate, setCarForUpdate] = useState(null);
     const [cars] = useAxios(carService.getAll(), allCars);
@@ -18,3 +18,5 @@ export const Cars = () => {
         </div>
     );
 };
+
+export default Cars

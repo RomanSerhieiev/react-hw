@@ -1,5 +1,5 @@
-import {Cars} from "./components/Cars/Cars";
-import {Users} from "./components/Users/Users";
+import Cars from "./components/Cars/Cars";
+import Users from "./components/Users/Users";
 
 const App = () => {
   return (

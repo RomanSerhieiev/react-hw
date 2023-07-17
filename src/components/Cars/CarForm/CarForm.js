@@ -1,8 +1,8 @@
 import {useEffect} from "react";
 import {useForm} from "react-hook-form";
-import {carService} from "../../services/car.services";
+import {carService} from "../../../services/car.services";
 import {joiResolver} from "@hookform/resolvers/joi"
-import {carValidator} from "../../validators/car.validator";
+import {carValidator} from "../../../validators/car.validator";
 
 export const CarForm = ({setAllCars, carForUpdate}) => {
     const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({mode: "all", resolver: joiResolver(carValidator)});

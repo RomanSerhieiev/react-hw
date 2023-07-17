@@ -1,5 +1,5 @@
 import React from "react";
-import {carService} from "../../services/car.services";
+import {carService} from "../../../services/car.services";
 
 export const Car = ({car, setCarForUpdate, setAllCars }) => {
     const {id, brand, price, year} = car;
