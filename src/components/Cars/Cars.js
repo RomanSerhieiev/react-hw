@@ -1,13 +1,14 @@
-import {carService} from "../../services/car.services";
-import {Car} from "./Car/Car";
+import {carService} from "../../services/cars.services";
+import {Car} from "./Car";
 import {useAxios} from "../../hooks/useAxios";
-import {CarForm} from "./CarForm/CarForm";
+import {CarForm} from "./CarForm";
 import {useState} from "react";
 
-const Cars = () => {
+export const Cars = () => {
     const [allCars, setAllCars] = useState(null);
-    const [carForUpdate, setCarForUpdate] = useState(null);
     const [cars] = useAxios(carService.getAll(), allCars);
+
+    const [carForUpdate, setCarForUpdate] = useState(null);
 
     return (
         <div>
@@ -18,5 +19,3 @@ const Cars = () => {
         </div>
     );
 };
-
-export default Cars

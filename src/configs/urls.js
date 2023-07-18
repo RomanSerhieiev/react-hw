@@ -1,7 +1,7 @@
-export const carUrl = 'http://owu.linkpc.net/carsAPI/v1';
-export const jpUrl = 'http://jsonplaceholder.typicode.com';
+export const baseCarsUrl = 'http://owu.linkpc.net/carsAPI/v1';
+export const baseJpUrl = 'http://jsonplaceholder.typicode.com';
 
-export const carUrls = {
+export const carsUrls = {
     cars: '/cars'
 };
 

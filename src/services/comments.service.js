@@ -1,7 +1,7 @@
 import {axiosServiceJp} from "./axios.service";
 import {jpUrls} from "../configs/urls";
 
-export const jpService = {
+export const commentsService = {
     getAllUsers: () => axiosServiceJp.get(jpUrls.users),
     getAllPosts: () => axiosServiceJp.get(jpUrls.posts),
     getAllComments: () => axiosServiceJp.get(jpUrls.comments),

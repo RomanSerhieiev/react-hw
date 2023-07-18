@@ -1,11 +1,12 @@
 import React from 'react';
-import {jpService} from "../../../services/jp.service";
 
-const User = ({user, setUserForUpdate, setAllUsers}) => {
+import {commentsService} from "../../services/comments.service";
+
+export const Comment = ({user, setUserForUpdate, setAllUsers}) => {
     const {id, name, username, email, address, phone, website, company} = user;
 
     const deleteUser = async (id) => {
-        await jpService.updateUserById(id);
+        await commentsService.updateUserById(id);
         setAllUsers(prev => !prev);
     };
 
@@ -37,5 +38,3 @@ const User = ({user, setUserForUpdate, setAllUsers}) => {
         </div>
     );
 };
-
-export default User

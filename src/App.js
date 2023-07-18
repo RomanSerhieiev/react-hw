@@ -1,13 +1,11 @@
-import Cars from "./components/Cars/Cars";
-import Users from "./components/Users/Users";
+import {Cars} from "./components/Cars/Cars";
+import {Comments} from "./components/Comments/Comments";
 
-const App = () => {
+export const App = () => {
   return (
     <div>
       <Cars />
-      <Users />
+      <Comments />
     </div>
   );
 }
-
-export default App

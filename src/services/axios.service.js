@@ -1,6 +1,6 @@
 import axios from "axios";
-import {carUrl, jpUrl} from "../configs/urls";
+import {baseCarsUrl, baseJpUrl} from "../configs/urls";
 
-export const axiosServiceCar = axios.create({ baseURL: carUrl });
+export const axiosServiceCar = axios.create({ baseURL: baseCarsUrl });
 
-export const axiosServiceJp = axios.create({ baseURL: jpUrl });
+export const axiosServiceJp = axios.create({ baseURL: baseJpUrl });
