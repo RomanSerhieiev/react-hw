@@ -1,13 +1,13 @@
 import React from 'react';
 
-const GenreBadge = () => {
+const StarsRating = () => {
     return (
         <div>
-
+            StarsRating
         </div>
     );
 };
 
 export {
-    GenreBadge
+    StarsRating
 };

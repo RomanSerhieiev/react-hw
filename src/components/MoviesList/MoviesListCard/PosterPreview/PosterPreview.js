@@ -1,13 +1,13 @@
 import React from 'react';
 
-const StarsRating = () => {
+const PosterPreview = () => {
     return (
         <div>
-
+            PosterPreview
         </div>
     );
 };
 
 export {
-    StarsRating
+    PosterPreview
 };

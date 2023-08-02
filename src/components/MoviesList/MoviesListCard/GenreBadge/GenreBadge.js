@@ -1,13 +1,13 @@
 import React from 'react';
 
-const MovieInfo = () => {
+const GenreBadge = () => {
     return (
         <div>
-
+            GenreBadge
         </div>
     );
 };
 
 export {
-    MovieInfo
+    GenreBadge
 };

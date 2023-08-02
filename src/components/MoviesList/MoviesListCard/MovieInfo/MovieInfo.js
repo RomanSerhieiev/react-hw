@@ -1,13 +1,13 @@
 import React from 'react';
 
-const MoviesListCard = () => {
+const MovieInfo = () => {
     return (
         <div>
-
+            MovieInfo
         </div>
     );
 };
 
 export {
-    MoviesListCard
+    MovieInfo
 };
