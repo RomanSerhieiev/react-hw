@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { MainLayout } from './layouts';
 import { CharactersPage, EpisodesPage } from './pages';
+import { Main } from './components/Main/Main';
 
 const router = createBrowserRouter([
     {
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to={'episodes'} />
+                element: <Main />
             },
             {
                 path: 'episodes',

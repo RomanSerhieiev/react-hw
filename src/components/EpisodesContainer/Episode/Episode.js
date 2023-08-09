@@ -1,5 +1,6 @@
-import css from './Episode.module.css';
 import { useNavigate } from 'react-router-dom';
+
+import css from './Episode.module.css';
 
 const Episode = ({episode}) => {
     const {id, name, episode: chapter, characters} = episode;
