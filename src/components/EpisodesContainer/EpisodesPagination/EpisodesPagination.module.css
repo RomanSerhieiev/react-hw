@@ -1,0 +1,56 @@
+@media screen and (min-width: 1260px) {
+    .EpisodesPagination {
+        width: 1220px;
+    }
+}
+
+@media screen and (max-width: 1259px) {
+    .EpisodesPagination {
+        width: 600px;
+    }
+}
+
+.EpisodesPagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+}
+
+.btn {
+    transition: all 0.2s ease 0s;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    border: 1px solid rgb(255, 152, 0);
+    background: transparent;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.btnCurr {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    border: 1px solid rgb(255, 152, 0);
+    background: rgb(255, 152, 0);
+    color: rgb(255, 255, 255);
+}
+
+.btnDis {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    border: 1px solid rgb(60, 62, 68);
+    background: rgb(60, 62, 68);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: rgb(255, 152, 0);
+    color: rgb(255, 255, 255);
+}

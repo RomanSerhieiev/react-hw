@@ -1,0 +1,20 @@
+.Episode {
+    width: 600px;
+    padding: 20px 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgb(60, 62, 68);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+}
+
+.Episode:hover {
+    cursor: pointer;
+    border: 5px solid rgb(255, 152, 0);
+    width: 590px;
+    padding: 15px 0;
+}
