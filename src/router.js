@@ -1,8 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { MainLayout } from './layouts';
-import { CharactersPage, EpisodesPage } from './pages';
-import { Main } from './components/Main/Main';
+import { CharactersPage, EpisodesPage, LocationsPage, MainPage } from './pages';
 
 const router = createBrowserRouter([
     {
@@ -11,7 +10,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Main />
+                element: <MainPage />
             },
             {
                 path: 'episodes',
@@ -20,11 +19,15 @@ const router = createBrowserRouter([
             {
                 path: 'characters',
                 element: <CharactersPage />
+            },
+            {
+                path: 'locations',
+                element: <LocationsPage />
             }
         ]
     }
-])
+]);
 
 export {
     router
-}
+};

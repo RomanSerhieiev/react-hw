@@ -1,0 +1,10 @@
+.EpisodesPage {
+    background: rgb(39, 43, 51);
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.EpisodesPage .EpisodesPagination {
+    display: grid;
+}

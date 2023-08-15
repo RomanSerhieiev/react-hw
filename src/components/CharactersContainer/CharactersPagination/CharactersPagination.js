@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
-import css from './EpisodesPagination.module.css';
+import css from './CharactersPagination.module.css';
 
-const EpisodesPagination = () => {
-    const {prevPage, nextPage} = useSelector(state => state.episodes);
+const CharactersPagination = () => {
+    const {prevPage, nextPage} = useSelector(state => state.characters);
     const [query, setQuery] = useSearchParams();
 
     const toAnotherPage = (params) => {
@@ -12,7 +12,7 @@ const EpisodesPagination = () => {
     };
 
     return (
-        <div className={css.EpisodesPagination}>
+        <div className={css.CharactersPagination}>
             <button
                 className={!prevPage ? css.btnDis : css.btn}
                 onClick={() => toAnotherPage(-1)}
@@ -33,5 +33,5 @@ const EpisodesPagination = () => {
 };
 
 export {
-    EpisodesPagination
+    CharactersPagination
 };

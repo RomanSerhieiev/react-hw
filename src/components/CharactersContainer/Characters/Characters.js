@@ -2,28 +2,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { episodesActions } from '../../../redux';
-import { Episode } from '../Episode/Episode';
-import css from './Episodes.module.css';
+import { charactersActions } from '../../../redux';
+import { Character } from '../Character/Character';
+import css from './Characters.module.css';
 
-const Episodes = () => {
+const Characters = () => {
     const dispatch = useDispatch();
-    const {episodes} = useSelector(store => store.episodes);
+    const {characters} = useSelector(store => store.characters);
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
         const newPage = !isNaN(parseInt(query.get('page'))) ? query.get('page') : '1';
-        dispatch(episodesActions.getEpisodes(newPage));
+        dispatch(charactersActions.getCharacters(newPage));
         setQuery(prev => ({...prev, page: newPage}));
     }, [query, dispatch, setQuery]);
 
     return (
-        <div className={css.Episodes}>
-            {episodes.map(episode => <Episode key={episode.id} episode={episode} />)}
+        <div className={css.Characters}>
+            {characters.map(character => <Character key={character.id} character={character} />)}
         </div>
     );
 };
 
 export {
-    Episodes
+    Characters
 };

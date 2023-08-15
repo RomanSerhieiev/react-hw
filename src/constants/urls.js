@@ -1,25 +1,27 @@
-const baseURL = process.env.REACT_APP_API
+const baseURL = process.env.REACT_APP_API;
 
-const episodes = '/episode'
-const characters = '/character'
-const locations = '/location'
+const endpoints = {
+    episodes: '/episode',
+    characters: '/character',
+    locations: '/location'
+};
 
 const urls = {
     episodes: {
-        all: episodes,
-        id: (id) => `${episodes}/${id}`
+        page: endpoints.episodes,
+        id: (id) => `${endpoints.episodes}/${id}`
     },
     characters: {
-        all: characters,
-        id: (id) => `${characters}/${id}`
+        page: endpoints.characters,
+        id: (id) => `${endpoints.characters}/${id}`
     },
     locations: {
-        all: locations,
-        id: (id) => `${locations}/${id}`
+        page: endpoints.locations,
+        id: (id) => `${endpoints.locations}/${id}`
     }
-}
+};
 
 export {
     baseURL,
     urls
-}
+};

@@ -1,10 +1,14 @@
-import { Episodes, EpisodesPagination } from '../../components';
+import { Episodes, EpisodesFilter, EpisodesPagination } from '../../components';
+import css from './EpisodesPage.module.css';
 
 const EpisodesPage = () => {
     return (
-        <div>
-            <Episodes />
-            <EpisodesPagination />
+        <div className={css.EpisodesPage}>
+            <EpisodesFilter />
+            <div className={css.EpisodesPagination}>
+                <Episodes />
+                <EpisodesPagination />
+            </div>
         </div>
     );
 };
