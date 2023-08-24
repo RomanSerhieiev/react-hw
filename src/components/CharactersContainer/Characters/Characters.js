@@ -10,15 +10,17 @@ const Characters = () => {
     const dispatch = useDispatch();
     const {characters} = useSelector(store => store.characters);
     const [query, setQuery] = useSearchParams({page: '1'});
+    const pageParam = query.get('page');
 
     useEffect(() => {
-        const newPage = !isNaN(parseInt(query.get('page'))) ? query.get('page') : '1';
-        dispatch(charactersActions.getCharacters(newPage));
-        setQuery(prev => ({...prev, page: newPage}));
-    }, [query, dispatch, setQuery]);
+        const page = !isNaN(parseInt(pageParam)) ? pageParam : '1';
+        dispatch(charactersActions.getCharacters({page}));
+        setQuery(prev => ({...prev, page}));
+    }, [dispatch, setQuery, pageParam]);
 
     return (
         <div className={css.Characters}>
+            <h2>Characters from {characters[0]?.id} to {characters[characters.length - 1]?.id}</h2>
             {characters.map(character => <Character key={character.id} character={character} />)}
         </div>
     );

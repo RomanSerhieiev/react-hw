@@ -4,7 +4,3 @@
     display: grid;
     grid-template-columns: 300px auto;
 }
-
-.CharactersPage .CharactersPagination {
-    display: grid;
-}

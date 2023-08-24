@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import css from './EpisodesPagination.module.css';
 
 const EpisodesPagination = () => {
-    const {prevPage, nextPage} = useSelector(state => state.episodes);
+    const {pages, next, prev} = useSelector(store => store.episodes);
     const [query, setQuery] = useSearchParams();
 
     const toAnotherPage = (params) => {
@@ -14,17 +14,17 @@ const EpisodesPagination = () => {
     return (
         <div className={css.EpisodesPagination}>
             <button
-                className={!prevPage ? css.btnDis : css.btn}
+                className={!prev ? css.btnDis : css.btn}
                 onClick={() => toAnotherPage(-1)}
-                disabled={!prevPage}
+                disabled={!prev}
             >
                 PREV
             </button>
-            <div className={css.btnCurr}>PAGE {+query.get('page')}</div>
+            <div className={css.btnCurr}>PAGE {+query.get('page')}/{pages}</div>
             <button
-                className={!nextPage ? css.btnDis : css.btn}
+                className={!next ? css.btnDis : css.btn}
                 onClick={() => toAnotherPage(1)}
-                disabled={!nextPage}
+                disabled={!next}
             >
                 NEXT
             </button>

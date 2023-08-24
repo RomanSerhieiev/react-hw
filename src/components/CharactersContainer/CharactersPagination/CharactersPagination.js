@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import css from './CharactersPagination.module.css';
 
 const CharactersPagination = () => {
-    const {prevPage, nextPage} = useSelector(state => state.characters);
+    const {pages, next, prev} = useSelector(store => store.characters);
     const [query, setQuery] = useSearchParams();
 
     const toAnotherPage = (params) => {
@@ -14,17 +14,17 @@ const CharactersPagination = () => {
     return (
         <div className={css.CharactersPagination}>
             <button
-                className={!prevPage ? css.btnDis : css.btn}
+                className={!prev ? css.btnDis : css.btn}
                 onClick={() => toAnotherPage(-1)}
-                disabled={!prevPage}
+                disabled={!prev}
             >
                 PREV
             </button>
-            <div className={css.btnCurr}>PAGE {+query.get('page')}</div>
+            <div className={css.btnCurr}>PAGE {+query.get('page')}/{pages}</div>
             <button
-                className={!nextPage ? css.btnDis : css.btn}
+                className={!next ? css.btnDis : css.btn}
                 onClick={() => toAnotherPage(1)}
-                disabled={!nextPage}
+                disabled={!next}
             >
                 NEXT
             </button>

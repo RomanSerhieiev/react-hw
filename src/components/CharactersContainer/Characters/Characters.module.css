@@ -1,7 +1,14 @@
 .Characters {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 20px;
     padding: 20px;
     justify-content: center;
+}
+
+.Characters h2 {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
 }

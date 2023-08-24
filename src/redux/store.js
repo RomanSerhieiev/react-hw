@@ -1,15 +1,14 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 
-import { charactersReducer, episodesReducer, locationsReducer } from './reducers';
+import { charactersReducer, episodesReducer, locationsReducer } from './slices';
 
-const rootReducer = combineReducers({
-    episodes: episodesReducer,
-    characters: charactersReducer,
-    locations: locationsReducer
-});
-
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = configureStore({
+    reducer: {
+        episodes: episodesReducer,
+        characters: charactersReducer,
+        locations: locationsReducer
+    }
+})
 
 export {
     store

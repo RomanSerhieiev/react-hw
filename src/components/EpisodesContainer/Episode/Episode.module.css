@@ -2,17 +2,37 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     background: rgb(60, 62, 68);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
-    text-align: center;
+    gap: 20px;
 }
 
-.Episode:hover {
+.Episode h3 {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.Episode h3:hover {
+    color: rgb(255, 152, 0);
     cursor: pointer;
-    border: 5px solid rgb(255, 152, 0);
-    padding: 15px;
+}
+
+.Status {
+    align-items: center;
+    display: flex;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.Link:hover {
+    color: rgb(255, 152, 0);
+    cursor: pointer;
+}
+
+.Second {
+    color: rgb(158, 158, 158);
+    font-size: 16px;
+    font-weight: 500;
 }

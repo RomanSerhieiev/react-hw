@@ -1,0 +1,19 @@
+.Footer {
+    flex: 1;
+    background: rgb(32, 35, 41);
+    color: rgb(158, 158, 158);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.Link {
+    cursor: pointer;
+}
+
+.Link:hover {
+    color: rgb(255, 152, 0);;
+}
